@@ -53,6 +53,17 @@ alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 alias ns="nslookup"
 
+# Docker shortcuts
+alias dc="docker compose"
+alias dup="docker compose up -d"
+alias ddo="docker-compose down"
+alias dps="docker ps"
+
+# NPM shortcuts
+alias npms="npm start"
+alias npmr="npm run"
+alias npmu="npm update"
+
 # App shortcuts
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias discord="/Applications/Discord.app/Contents/MacOS/Discord"
