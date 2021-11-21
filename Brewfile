@@ -1,0 +1,80 @@
+# Taps
+tap "bramstein/webfonttools"
+tap "carlocab/personal"
+tap "cloudflare/cloudflare"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "khanhas/tap"
+tap "mongodb/brew"
+# Oackages
+brew "ack"
+brew "autoconf"
+brew "automake"
+brew "python@3.9"
+brew "glib"
+brew "pkg-config"
+brew "cairo"
+brew "chezmoi"
+brew "coreutils"
+brew "findutils"
+brew "jpeg"
+brew "ghostscript"
+brew "giflib"
+brew "git"
+brew "git-lfs"
+brew "libtool"
+brew "libevent"
+brew "unbound"
+brew "gnutls"
+brew "nghttp2"
+brew "gnupg"
+brew "gobject-introspection"
+brew "grep"
+brew "harfbuzz"
+brew "ldns"
+brew "pango"
+brew "librsvg"
+brew "llvm"
+brew "lynx"
+brew "mas"
+brew "moreutils"
+brew "ncurses"
+brew "neofetch"
+brew "openjdk"
+brew "openssh"
+brew "p7zip"
+brew "pigz"
+brew "pinentry-mac"
+brew "pv"
+brew "rename"
+brew "rlwrap"
+brew "ssh-copy-id"
+brew "starship"
+brew "telnet"
+brew "tmux"
+brew "tree"
+brew "vbindiff"
+brew "wget"
+brew "woff2"
+brew "zopfli"
+brew "bramstein/webfonttools/sfnt2woff"
+brew "bramstein/webfonttools/sfnt2woff-zopfli"
+brew "carlocab/personal/unrar"
+brew "cloudflare/cloudflare/cloudflared"
+brew "khanhas/tap/spicetify-cli"
+brew "mongodb/brew/mongodb-community"
+# Mac App store apps
+mas "AdGuard for Safari", id: 1440147259
+mas "Dark Reader for Safari", id: 1438243180
+mas "Dashlane", id: 517914548
+mas "Grammarly for Safari", id: 1462114288
+mas "Honey", id: 1472777122
+mas "MeddleMonkey", id: 1539631953
+mas "Octotree", id: 1457450145
+mas "Telegram", id: 747648890
+mas "Unsplash Wallpapers", id: 1284863847
+mas "WhatsApp", id: 1147396723
+mas "WireGuard", id: 1451685025
+
