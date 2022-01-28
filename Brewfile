@@ -1,4 +1,3 @@
-tap "bramstein/webfonttools"
 tap "carlocab/personal"
 tap "cloudflare/cloudflare"
 tap "homebrew/bundle"
@@ -60,28 +59,14 @@ brew "vbindiff"
 brew "wget"
 brew "woff2"
 brew "youtube-dl"
-brew "zopfli"
-brew "bramstein/webfonttools/sfnt2woff"
-brew "bramstein/webfonttools/sfnt2woff-zopfli"
-brew "carlocab/personal/unrar"
 brew "cloudflare/cloudflare/cloudflared"
-brew "khanhas/tap/spicetify-cli"
 brew "mongodb/brew/mongodb-community"
-cask "background-music"
-mas "AdGuard for Safari", id: 1440147259
-mas "Apple Configurator 2", id: 1037126344
-mas "Dark Reader for Safari", id: 1438243180
 mas "Dashlane", id: 517914548
-mas "Grammarly for Safari", id: 1462114288
-mas "Honey", id: 1472777122
 mas "Keynote", id: 409183694
-mas "MeddleMonkey", id: 1539631953
 mas "Numbers", id: 409203825
-mas "Octotree", id: 1457450145
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "Unsplash Wallpapers", id: 1284863847
 mas "WhatsApp", id: 1147396723
 mas "WireGuard", id: 1451685025
-mas "Workspot", id: 978894159
