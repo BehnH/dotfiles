@@ -59,6 +59,12 @@ alias dup="docker compose up -d"
 alias ddo="docker-compose down"
 alias dps="docker ps"
 
+# Terraform shortcuts
+alias tf="terraform"
+alias tfi="terraform init"
+alias tfp="terraform plan"
+alias tfa="terraform apply"
+
 # NPM shortcuts
 alias npms="npm start"
 alias npmr="npm run"
