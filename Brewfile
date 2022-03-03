@@ -87,8 +87,10 @@ mas "Grammarly for Safari", id: 1462114288
 mas "Honey", id: 1472777122
 mas "MeddleMonkey", id: 1539631953
 mas "Octotree", id: 1457450145
+mas "Pages", id: 409201541
+mas "Parcel", id: 639968404
+mas "Pasta", id: 1438389787
 mas "Telegram", id: 747648890
 mas "Unsplash Wallpapers", id: 1284863847
 mas "WhatsApp", id: 1147396723
 mas "WireGuard", id: 1451685025
-mas "Workspot", id: 978894159
