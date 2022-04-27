@@ -285,6 +285,7 @@
     useConfigOnly = true
 	email = 7383025+BehnH@users.noreply.github.com
 	signingkey = 2DEDB9D0388CF9F4
+	name = Behn
 
     # [!] DO NOT store sensitive information such as the Git user
     # credentials (`name` / `email`), or things such as the `signingkey`
@@ -302,3 +303,8 @@
     #     by the local ones
 
     path = ~/.gitconfig.local
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager-core
+[credential "https://dev.azure.com"]
+	useHttpPath = true
