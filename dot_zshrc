@@ -1,12 +1,20 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # Load Starship (https://starship.rs)
 eval "$(starship init zsh)"
 
-# Add bash autocompleteion support
+# Add bash autocompletion support
 autoload bashcompinit
 bashcompinit
 
 autoload -Uz compinit
 compinit
+
+# Make Homebrew not autoupdate every time it's run, but instead once a week
+export HOMEBREW_AUTO_UPDATE_SECS=604800
+
+# Disable Homebrew analytics
+export HOMEBREW_NO_ANALYTICS=1
 
 # transfer.sh alias
 transfer(){ if [ $# -eq 0 ];then echo "No arguments specified.\nUsage:\n transfer <file|directory>\n ... | transfer <file_name>">&2;return 1;fi;if tty -s;then file="$1";file_name=$(basename "$file");if [ ! -e "$file" ];then echo "$file: No such file or directory">&2;return 1;fi;if [ -d "$file" ];then file_name="$file_name.zip" ,;(cd "$file"&&zip -r -q - .)|curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null,;else cat "$file"|curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null;fi;else file_name=$1;curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null;fi;}
@@ -21,8 +29,38 @@ unset file;
 
 # Add NVM directory
 export NVM_DIR="$HOME/.nvm"
+
 # Load NVM
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh
+
+# Add password generation function
+pwgen() {
+    LC_ALL=C tr -dc 'A-Za-z0-9' </dev/urandom | head -c 32 ; echo;
+}
+
+# Enter a running Docker container
+function denter() {
+    if [[ ! "$1" ]] ; then
+        echo "You must supply a container ID or name."
+        return 0
+    fi
+
+    docker exec -it $1 bash
+    return 0
+}
+
+# Delete a given line in the known_hosts file
+khrm() {
+    re='^[0-9]+$'
+    if ! [[ $1 =~ $re ]] ; then
+        echo "error: line number missing" >&2;
+    else
+        sed -i '' "$1d" ~/.ssh/known_hosts
+    fi
+}
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
