@@ -1,16 +1,18 @@
 tap "bramstein/webfonttools"
 tap "carlocab/personal"
 tap "cloudflare/cloudflare"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "khanhas/tap"
+tap "microsoft/git"
 tap "mongodb/brew"
 brew "ack"
 brew "act"
-brew "python@3.10"
 brew "ansible"
 brew "giflib"
 brew "jpeg"
@@ -24,8 +26,7 @@ brew "chezmoi"
 brew "coreutils"
 brew "libtool"
 brew "libevent"
-brew "p11-kit"
-brew "unbound"
+brew "unbound", restart_service: true
 brew "gnutls"
 brew "gobject-introspection"
 brew "harfbuzz"
@@ -45,17 +46,21 @@ brew "librsvg"
 brew "llvm"
 brew "lynx"
 brew "mas"
+brew "mercurial"
+brew "node@16"
+brew "mongosh"
 brew "moreutils"
 brew "ncurses"
 brew "neofetch"
 brew "nghttp2"
-brew "node@16"
+brew "node@14"
 brew "openjdk"
 brew "openssh"
 brew "p7zip"
 brew "pigz"
 brew "pinentry-mac"
 brew "pv"
+brew "pwgen"
 brew "rename"
 brew "rlwrap"
 brew "ssh-copy-id"
@@ -73,24 +78,25 @@ brew "bramstein/webfonttools/sfnt2woff"
 brew "bramstein/webfonttools/sfnt2woff-zopfli"
 brew "carlocab/personal/unrar"
 brew "cloudflare/cloudflare/cloudflared"
+brew "heroku/brew/heroku"
 brew "khanhas/tap/spicetify-cli"
 brew "mongodb/brew/mongodb-community"
-cask "background-music"
 cask "discord-canary"
+cask "fig"
 cask "flameshot"
+cask "font-fira-code"
 cask "gimp"
-mas "AdGuard for Safari", id: 1440147259
-mas "Apple Configurator 2", id: 1037126344
-mas "Dark Reader for Safari", id: 1438243180
+cask "git-credential-manager-core"
+cask "intellij-idea-ce"
+cask "ngrok"
+cask "raycast"
+cask "rectangle"
+cask "secretive"
+cask "slack-beta"
+cask "spotify"
 mas "Dashlane", id: 517914548
-mas "Grammarly for Safari", id: 1462114288
-mas "Honey", id: 1472777122
-mas "MeddleMonkey", id: 1539631953
-mas "Octotree", id: 1457450145
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Parcel", id: 639968404
-mas "Pasta", id: 1438389787
-mas "Telegram", id: 747648890
 mas "Unsplash Wallpapers", id: 1284863847
-mas "WhatsApp", id: 1147396723
-mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
