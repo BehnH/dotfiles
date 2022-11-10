@@ -254,7 +254,7 @@
     #
     # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_help_autocorrect
 
-    autocorrect = 20
+    autocorrect = immediate
 
 [init]
 
@@ -276,16 +276,13 @@
     # annotated tags when pushing branches out.
 
     followTags = true
+	autoSetupRemote = true
 
 [user]
 
     # Do not guess the user's identity.
     # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
-
     useConfigOnly = true
-	email = 7383025+BehnH@users.noreply.github.com
-	signingkey = 2DEDB9D0388CF9F4
-	name = Behn
 
     # [!] DO NOT store sensitive information such as the Git user
     # credentials (`name` / `email`), or things such as the `signingkey`
@@ -303,8 +300,3 @@
     #     by the local ones
 
     path = ~/.gitconfig.local
-[credential]
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager-core
-[credential "https://dev.azure.com"]
-	useHttpPath = true
