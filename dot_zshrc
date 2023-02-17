@@ -126,6 +126,9 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done;
 unset file;
 
+# Load Kube alises
+[ -f ~/kube_aliases.zsh ] && source ~/kube_aliases.zsh
+
 # Add NVM directory
 export NVM_DIR="$HOME/.nvm"
 
@@ -134,6 +137,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # Tab completion for SSH hostnames - based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh
+
+# Add ${HOME}/bin to path
+export PATH="${HOME}/bin:${PATH}"
 
 # Password generation
 pwgen() {
@@ -178,4 +184,3 @@ bindkey '[C' forward-word # Alt+Left
 bindkey '[D' backward-word # Alt+Right
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
