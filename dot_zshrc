@@ -169,12 +169,7 @@ khrm() {
 
 # Decode base64 encoded SAML response
 function decodeSaml() {
-    if [[ ! "$1" ]] ; then
-        echo "You must supply a valid SAML response from Datadog"
-        return 0
-    fi
-
-    echo $1 | base64 --decode | xmllint --format -
+    pbpaste | base64 --decode | xmllint --format -
     return 0
 }
 
