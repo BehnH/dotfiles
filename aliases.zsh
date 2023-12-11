@@ -118,3 +118,8 @@ alias reload="exec ${SHELL} -l"
 
 # Flush DNS
 alias flushdns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+
+# Replacement CLI tools
+alias cat='bat'
+alias ping='prettyping --nolegend'
+alias help='tldr'
