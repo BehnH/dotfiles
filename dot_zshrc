@@ -129,6 +129,9 @@ unset file;
 # Load Kube alises
 [ -f ~/kube_aliases.zsh ] && source ~/kube_aliases.zsh
 
+# Load aliases
+[ -f ~/aliases.zsh ] && source ~/aliases.zsh
+
 # Add NVM directory
 export NVM_DIR="$HOME/.nvm"
 
@@ -140,6 +143,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add ${HOME}/bin to path
 export PATH="${HOME}/bin:${PATH}"
+
+# Add krew to path
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Add Go tools to path
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Password generation
 pwgen() {
@@ -154,6 +163,17 @@ function denter() {
     fi
 
     docker exec -it $1 bash
+    return 0
+}
+
+# Download a YouTube video as audio
+function ytdla() {
+    if [[ ! "$1" ]] ; then
+        echo "You must supply a video to download."
+        return 0
+    fi
+
+    yt-dlp -x --audio-format mp3 "$1"
     return 0
 }
 
@@ -179,3 +199,11 @@ bindkey '[C' forward-word # Alt+Left
 bindkey '[D' backward-word # Alt+Right
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/vault vault
+
+# bun completions
+[ -s "/Users/behn/.bun/_bun" ] && source "/Users/behn/.bun/_bun"
+export PATH=$PATH:/Users/behn/.spicetify
