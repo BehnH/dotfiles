@@ -43,7 +43,9 @@ brew "bat"
 brew "glib"
 brew "cairo"
 brew "chezmoi"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 brew "cloudflare-wrangler"
+{{ end }}
 brew "cmctl"
 brew "ruby"
 brew "cocoapods"
@@ -59,7 +61,9 @@ brew "coreutils"
 brew "direnv"
 brew "docker"
 brew "docker-compose"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 brew "doctl"
+{{ end }}
 brew "harfbuzz"
 brew "libass"
 brew "pango"
@@ -81,11 +85,13 @@ brew "librsvg"
 brew "libtool"
 brew "graphviz"
 brew "grep"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 brew "hcloud"
 brew "helm"
 brew "infracost"
 brew "ipcalc"
 brew "istioctl"
+{{ end }}
 brew "jpeg"
 brew "jq"
 brew "kompose"
@@ -98,7 +104,9 @@ brew "llvm"
 brew "lynx"
 brew "mas"
 brew "mercurial"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 brew "minikube"
+{{ end }}
 brew "mongosh"
 brew "moreutils"
 brew "neofetch"
@@ -107,7 +115,9 @@ brew "nghttp2"
 brew "python@3.10"
 brew "node@14"
 brew "node@16"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 brew "okteto"
+{{ end }}
 brew "openjdk"
 brew "openssh"
 brew "p7zip"
@@ -127,7 +137,9 @@ brew "redis"
 brew "rename"
 brew "rlwrap"
 brew "s3cmd"
+{{ if eq .chezmoi.hostname "ld-bh"}}
 brew "saml2aws"
+{{ end }}
 brew "skopeo"
 brew "sops"
 brew "sqlc"
@@ -147,7 +159,6 @@ brew "watch"
 brew "wget"
 brew "woff2"
 brew "yamllint"
-brew "youtube-dl"
 brew "yq"
 brew "yt-dlp"
 brew "zplug"
@@ -177,19 +188,23 @@ cask "font-fira-code"
 cask "gimp"
 cask "git-credential-manager-core"
 cask "github"
-cask "intellij-idea-ce"
 cask "iterm2"
 cask "jetbrains-toolbox"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 cask "mullvadvpn"
+{{ end }}
 cask "ngrok"
 cask "raycast"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 cask "vlc"
 cask "whisky"
+{{ end }}
 cask "yubico-yubikey-manager"
 mas "Amphetamine", id: 937984704
+{{ if ne .chezmoi.hostname "ld-bh"}}
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
@@ -197,7 +212,9 @@ mas "Pages", id: 409201541
 mas "Tailscale", id: 1475387142
 mas "Telegram", id: 747648890
 mas "WireGuard", id: 1451685025
+{{ end }}
 mas "Xcode", id: 497799835
+{{ if ne .chezmoi.hostname "ld-bh"}}
 vscode "1Password.op-vscode"
 vscode "aaron-bond.better-comments"
 vscode "adamhartford.vscode-base64"
@@ -258,3 +275,4 @@ vscode "xabikos.JavaScriptSnippets"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yzhang.markdown-all-in-one"
 vscode "zhuangtongfa.material-theme"
+{{ end }}
