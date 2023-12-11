@@ -1,25 +1,38 @@
 tap "1password/tap"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 tap "behnh/formulae"
 tap "beryju/tap"
+{{ end }}
 tap "bramstein/webfonttools"
 tap "carlocab/personal"
 tap "cloudentity/tap"
+{{ if ne .chezmoi.hostname "ld-bh" }}
 tap "cloudflare/cloudflare"
 tap "cockroachdb/tap"
 tap "fluxcd/tap"
 tap "getsentry/tools"
+{{ end }}
 tap "go-task/tap"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 tap "hashicorp/tap"
+{{ end }}
 tap "heroku/brew"
 tap "homebrew/bundle"
+{{ if ne .chezmoi.hostname "ld-bh" }}
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
+{{ end }}
 tap "homebrew/cask-versions"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 tap "homebrew/core"
+{{ end }}
 tap "homebrew/services"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 tap "infrahq/tap"
+{{ end }}
 tap "khanhas/tap"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 tap "microsoft/git"
 tap "minio/stable"
 tap "mongodb/brew"
@@ -29,12 +42,15 @@ tap "raffis/gitops-zombies"
 tap "reviewdog/tap"
 tap "somuchforsubtlety/tap"
 tap "twitchdev/twitch"
+{{ end }}
 brew "ack"
 brew "act"
 brew "age"
 brew "ansible"
 brew "giflib"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 brew "argocd"
+{{ end }}
 brew "autoconf"
 brew "automake"
 brew "python@3.11"
@@ -45,8 +61,8 @@ brew "cairo"
 brew "chezmoi"
 {{ if ne .chezmoi.hostname "ld-bh"}}
 brew "cloudflare-wrangler"
-{{ end }}
 brew "cmctl"
+{{ end }}
 brew "ruby"
 brew "cocoapods"
 brew "libevent"
@@ -154,7 +170,9 @@ brew "tldr"
 brew "tmux"
 brew "tree"
 brew "vbindiff"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 brew "wakeonlan"
+{{ end }}
 brew "watch"
 brew "wget"
 brew "woff2"
@@ -167,25 +185,34 @@ brew "beryju/tap/korb"
 brew "bramstein/webfonttools/sfnt2woff"
 brew "bramstein/webfonttools/sfnt2woff-zopfli"
 brew "carlocab/personal/unrar"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 brew "cloudentity/tap/oauth2c"
 brew "cloudflare/cloudflare/cloudflared"
 brew "cockroachdb/tap/cockroach"
 brew "fluxcd/tap/flux"
+{{ end }}
 brew "go-task/tap/go-task"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 brew "hashicorp/tap/vault"
 brew "minio/stable/mc"
+{{ end }}
 brew "mongodb/brew/mongodb-community"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 brew "ory/tap/kratos"
 brew "oven-sh/bun/bun"
 brew "raffis/gitops-zombies/gitops-zombies"
 brew "reviewdog/tap/reviewdog"
 brew "twitchdev/twitch/twitch-cli"
+{{ end }}
 cask "1password-cli"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 cask "battery"
-cask "dbeaver-community"
+{{ end }}
 cask "discord-canary"
 cask "font-fira-code"
+{{ if ne .chezmoi.hostname "ld-bh"}}
 cask "gimp"
+{{ end }}
 cask "git-credential-manager-core"
 cask "github"
 cask "iterm2"
