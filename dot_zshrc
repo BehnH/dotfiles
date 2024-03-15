@@ -118,6 +118,9 @@ export HOMEBREW_AUTO_UPDATE_SECS=604800
 # Disable Homebrew analytics
 export HOMEBREW_NO_ANALYTICS=1
 
+# Set bat theme
+export BAT_THEME=base16
+
 # transfer.sh alias
 transfer(){ if [ $# -eq 0 ];then echo "No arguments specified.\nUsage:\n transfer <file|directory>\n ... | transfer <file_name>">&2;return 1;fi;if tty -s;then file="$1";file_name=$(basename "$file");if [ ! -e "$file" ];then echo "$file: No such file or directory">&2;return 1;fi;if [ -d "$file" ];then file_name="$file_name.zip" ,;(cd "$file"&&zip -r -q - .)|curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null,;else cat "$file"|curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null;fi;else file_name=$1;curl --progress-bar --upload-file "-" "https://transfer.sh/$file_name"|tee /dev/null;fi;}
 
@@ -151,6 +154,7 @@ export PATH="${HOME}/bin:${PATH}"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Add Go tools to path
+eval "$(goenv init -)"
 export PATH=$PATH:$(go env GOPATH)/bin
 
 # Password generation

@@ -8,7 +8,7 @@ alias ...="cd ../.."
 alias d="cd ~/Documents"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/GitHub"
+alias p="cd ~/projects"
 alias g="git"
 
 # Detect which `ls` flavor is in use
